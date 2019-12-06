@@ -1,0 +1,26 @@
+{{date-selector startOn=date onChange=(action (mut date))}}
+
+{{#if groupPayments}}
+  <div class="group-payments">
+    {{#each groupPayments as |payment|}}
+      {{group-payment-input payment.label
+                            payment.initialValue
+                            payment.cast
+                            onSave=(route-action 'saveGroupPayment' payment)
+      }}
+    {{/each}}
+  </div>
+{{/if}}
+
+{{group-select group onChange=(action (mut group))}}
+
+{{#if dataExists}}
+  {{w2ui-grid 'payments-grid'
+              columns=columns
+              data=gridData
+              events=events
+              class="payments-grid"
+  }}
+{{else}}
+  <strong>{{t 'common.dataNotExists'}}</strong>
+{{/if}}

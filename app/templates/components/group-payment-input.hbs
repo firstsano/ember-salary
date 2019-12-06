@@ -1,0 +1,17 @@
+<div class="group-payment-input input-prepend input-append">
+  <span class="add-on group-payment-input__label">{{label}}</span>
+  {{#if isBoolean}}
+    <span class="add-on group-payment-input__input">
+      <input type="checkbox"
+             checked={{value}}
+             onclick={{action (mut value) value="target.checked"}}
+      />
+    </span>
+  {{else}}
+    <input value={{value}}
+           oninput={{action (mut value) value="target.value"}}
+           class="group-payment-input__input"
+    />
+  {{/if}}
+  <button class="btn" type="button" {{action onSave}}> {{t 'actions.submit'}} </button>
+</div>

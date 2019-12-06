@@ -1,0 +1,9 @@
+.group-select {
+  max-width: 100%;
+  width: 300px;
+
+  & .ember-power-select-search-input {
+    box-sizing: border-box;
+    padding: 15px 4px;
+  }
+}

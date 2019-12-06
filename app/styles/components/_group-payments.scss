@@ -1,0 +1,8 @@
+.group-payments {
+  border: double 3px $color-border;
+  margin: 10px auto;
+  padding: 15px 30px;
+  text-align: center;
+  width: 420px;
+  @include border-radius(3px);
+}

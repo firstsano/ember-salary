@@ -1,0 +1,11 @@
+<div class="group-select">
+  {{#power-select selected=selectedOption
+                  options=options
+                  searchField='name'
+                  renderInPlace=true
+                  onchange=(action 'sendOnChange')
+                  as |group|
+  }}
+    {{group.name}}
+  {{/power-select}}
+</div>

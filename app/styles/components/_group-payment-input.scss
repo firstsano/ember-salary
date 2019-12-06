@@ -1,0 +1,17 @@
+.group-payment-input {
+  &:last-child {
+    margin: 0;
+  }
+
+  & .group-payment-input__label {
+    text-align: center;
+    text-overflow: ellipsis;
+    width: 150px;
+  }
+
+  & .group-payment-input__input {
+    text-align: center;
+    width: 150px;
+    height: 20px;
+  }
+}
